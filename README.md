@@ -2,7 +2,7 @@
 
 ## Mock database to pull current user profiles and add new ones
 
-# Readme to come soon@
+# Readme to come soon!
 
 
 ## Photo Credits
@@ -15,3 +15,4 @@ Photo by <a href="https://unsplash.com/@rafaelladiniz?utm_source=unsplash&utm_me
 
 Photo by <a href="https://unsplash.com/@armedshutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ayo Ogunseinde</a> on <a href="https://unsplash.com/s/photos/people?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+   Photo by <a href="https://unsplash.com/@alexbemore?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Shatov</a> on <a href="https://unsplash.com/s/photos/social-media?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

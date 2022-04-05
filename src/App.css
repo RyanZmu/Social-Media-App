@@ -40,3 +40,14 @@ a{
   display: flex;
   justify-content: center;
 }
+
+.card-images {
+  margin-bottom:1em;
+  height:45.5vh;
+  object-fit:cover
+}
+
+.landing-image {
+  width:99vw;
+  height:50vh;
+}
