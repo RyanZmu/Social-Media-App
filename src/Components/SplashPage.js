@@ -5,16 +5,16 @@ import splash1 from '../images/splash-1.svg'
 import splash2 from '../images/splash-2.svg'
 import splash3 from '../images/splash-3.svg'
 import githublogo from '../images/github-logo.jpeg'
-import landingPage from '../images/landing-page.jpg'
+import landingPageImg from '../images/landing-page.jpg'
 
-const SplashPage = (props) => {
+const LandingPage = (props) => {
 
     return (
         <div className='splash-page'>
         <Container fluid className='splash-big-container'>
-            <Row>
+                <Row>
                     <Col >
-                    <img src={landingPage} className='landing-image' alt='multiple cubes with social media logos' /> 
+                     <img src={landingPageImg} className='landing-image' alt='multiple cubes with social media logos' /> 
                     </Col>
                 </Row>
             </Container>
@@ -67,4 +67,4 @@ const SplashPage = (props) => {
     )
 }
 
-export default SplashPage
+export default LandingPage

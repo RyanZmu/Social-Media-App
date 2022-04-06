@@ -8,9 +8,9 @@ const NavigatonBar = (props) => {
     return (
         <div className='main-nav-container'>
             <Navbar bg='dark' variant='dark' className='nav-bar-container' sticky='top'>
-            <Navbar.Brand as={Link} to='/'>Social Media App</Navbar.Brand>
+            <Navbar.Brand as={Link} to='/'>DevelopBook</Navbar.Brand>
                 <Nav className='nav-bar-navigation'>
-                   <Nav.Link as={Link} to='/profile/:userId'>Profile</Nav.Link>
+                   <Nav.Link as={Link} to={'/profile/' + props.userId}>Profile</Nav.Link>
                    <Nav.Link as={Link} to='/friends'>Friends</Nav.Link>
                    <Nav.Link as={Link} to='/find-users'>Find Users</Nav.Link>
                 </Nav>

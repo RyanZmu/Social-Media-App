@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import SplashPage from './Components/SplashPage';
+import LandingPage from './Components/SplashPage';
 import UserProfile from './Components/UserProfile';
 import UserLoginPage from './Components/LoginPage';
 import NavigatonBar from './Components/Navigation';
@@ -22,24 +22,24 @@ function App() {
     return Math.floor((1 + Math.random()) * 1000)
   }
 
-
   const [usersState,setUser] = useState({
     userList: [
       {
         id: generateId(),
-        active: false,
+        isOnline: false,
         firstName: 'Charles',
         lastName: 'Zoidberg',
         userName: 'soccerfan1',
         password: 'password1',
         interests: 'soccer,movies,games',
         hobbies: 'video games,biking,sailing',
-        favoriteShows: 'Will & Grace, Rick and Morty, Hawaii 5-0',
+        favoriteShows: 'Will & Grace, Rick and Morty, Hawaii Five-0',
+        status:'Taking the dog for a walk!',
         image: profileMan1
       },
       {
         id: generateId(),
-        active: true,
+        isOnline: true,
         firstName: 'Nick',
         lastName: 'Thompson',
         userName: 'guccimaner',
@@ -47,11 +47,12 @@ function App() {
         interests: 'rap,gym,women',
         hobbies: 'shopping,driving fast cars,being a chad',
         favoriteShows: 'Nitro Circus, Jackass, Ridiculousness',
+        status:`Mudd'in with the boyz - AYOOOO`,
         image: profileMan2
       },
       {
         id: generateId(),
-        active: false,
+        isOnline: false,
         firstName: 'Florence',
         lastName: 'Smith',
         userName: 'fancypants92',
@@ -59,11 +60,12 @@ function App() {
         interests: 'money,luxury,fine dining',
         hobbies: 'watch fitting,suit tailoring,arguing over the pronunciation of escargot',
         favoriteShows: 'Luxury Ads,Cribs,Sex and the City',
+        status:'Enjoying a spa day!',
         image: profileMan3
       },
       {
         id: generateId(),
-        active: true,
+        isOnline: true,
         firstName: 'Kelly',
         lastName: 'Roe',
         userName: 'kelly92',
@@ -71,32 +73,48 @@ function App() {
         interests: 'sports,shopping,travel',
         hobbies: 'going on cruises,hiking,learning new cultures',
         favoriteShows: 'Parts Unknown,SportsCenter,Mad Money',
+        status:'Trying to find love on Tinder is a drag!',
         image: profileWoman
       },
     ]
   })
 
   console.log(usersState);
-
   
+ const [activeUser,activeUserState] = useState({})
+
+  function isActiveUser (userRequested) {
+    // userRequested= {userName:'soccerfan1',password:'password1'}
+    console.log(userRequested);
+    usersState.userList.filter(user => {
+      if (userRequested.userName === user.userName && userRequested.password === user.password) {
+       return activeUserState(user)
+      }
+    })
+   
+  }
+
+    //have this be called when a user opens up profile page and when user completes sign in page - hard code for testing
+
+    console.log({activeUser});
   return (
     <div className="App">
-    <NavigatonBar/>
-
+    <NavigatonBar userId={activeUser.id}/> 
+    {/* we pass activeUser id to our nav bar so it can change url dynamically */}
 
 
     <Routes>
   <Route
-  path='/profile/:userId'
-  element={<UserProfile user='' />}
+  path={'/profile/' + activeUser.id}
+  element={<UserProfile user={activeUser}/>}
   />
   <Route 
   path='/sign-in'
-  element={<UserLoginPage/>}
+  element={<UserLoginPage activeUserCheck={isActiveUser}/>}
   />
   <Route
   path='/'
-  element={<SplashPage />}
+  element={<LandingPage />}
   />
 </Routes>
 
