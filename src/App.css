@@ -55,3 +55,20 @@ p {
   width:99vw;
   height:50vh;
 }
+
+.profile-page-top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.user-profile-card {
+  width:20vw;
+  height:20vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  color:white;
+}

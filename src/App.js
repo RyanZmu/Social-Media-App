@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { Popover } from 'react-bootstrap';
 import LandingPage from './Components/SplashPage';
 import UserProfile from './Components/UserProfile';
 import UserLoginPage from './Components/LoginPage';
@@ -13,6 +14,7 @@ import profileWoman from './images/userImages/profile-woman.jpg'
 import profileMan1 from './images/userImages/profile-man1.jpg'
 import profileMan2 from './images/userImages/profile-man2.jpg'
 import profileMan3 from './images/userImages/profile-man3.jpg'
+import { useBootstrapBreakpoints } from 'react-bootstrap/esm/ThemeProvider';
 
 
 
@@ -73,7 +75,7 @@ function App() {
         interests: 'sports,shopping,travel',
         hobbies: 'going on cruises,hiking,learning new cultures',
         favoriteShows: 'Parts Unknown,SportsCenter,Mad Money',
-        status:'Trying to find love on Tinder is a drag!',
+        status:'Hoping to get this job promotion!',
         image: profileWoman
       },
     ]
@@ -91,12 +93,12 @@ function App() {
        return activeUserState(user)
       }
     })
-   
   }
 
     //have this be called when a user opens up profile page and when user completes sign in page - hard code for testing
 
     console.log({activeUser});
+
   return (
     <div className="App">
     <NavigatonBar userId={activeUser.id}/> 
@@ -110,7 +112,7 @@ function App() {
   />
   <Route 
   path='/sign-in'
-  element={<UserLoginPage activeUserCheck={isActiveUser}/>}
+  element={<UserLoginPage activeUserCheck={isActiveUser} />}
   />
   <Route
   path='/'

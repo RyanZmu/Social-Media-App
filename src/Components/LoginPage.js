@@ -8,6 +8,7 @@ const UserLoginPage = (props) => {
    
     return ( 
         <div>
+            <Container className='login-container'>
             <Formik
             initialValues={{
                 userName:'',
@@ -15,7 +16,6 @@ const UserLoginPage = (props) => {
             }}
             onSubmit= {(event) => {
                 props.activeUserCheck({userName:event.userName, password:event.password})
-              
             }}
             >
                 <Form>
@@ -28,6 +28,7 @@ const UserLoginPage = (props) => {
                 <button type='submit'>Sign In</button>
                 </Form>
             </Formik>
+            </Container>
 
             <Container>
                 <Row>
