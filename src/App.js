@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './App.css';
@@ -108,7 +107,7 @@ function App() {
     <Routes>
   <Route
   path={'/profile/' + activeUser.id}
-  element={<UserProfile user={activeUser}/>}
+  element={<UserProfile user={activeUser} userList={usersState.userList} />}
   />
   <Route 
   path='/sign-in'

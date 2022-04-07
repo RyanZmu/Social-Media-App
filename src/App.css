@@ -1,8 +1,7 @@
 .App {
   box-sizing: border-box;
   margin: 0;
-  background-color: #212529;
-  /* color: white; */
+  background-color: #1B222C
 }
 
 a{
@@ -64,11 +63,43 @@ p {
 
 .user-profile-card {
   width:20vw;
-  height:20vh;
+  height:100vh;
 }
 
 .login-container {
   display: flex;
   justify-content: center;
   color:white;
+}
+
+.login-page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-page-image {
+  width: 60vw;
+  height: 50vh;
+}
+
+.user-profile-feed {
+  display: flex;
+  width: 40vw;
+  height: 30vh;
+}
+
+.user-feed-image {
+  max-width:5vw;
+  max-height:15vh;
+  object-fit: stretch;
+}
+
+.user-feed-card {
+  display: flex;
+  justify-content: center;
+  width:40vw;
+  height:30vh;
 }

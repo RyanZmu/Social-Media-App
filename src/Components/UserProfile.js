@@ -14,26 +14,38 @@ const UserProfile = (props) => {
                 <Card.Title>{`${props.user.firstName} ${props.user.lastName}`}</Card.Title>
                 <Card.Img className='user-card-image' src={props.user.image} />
                 <Card.Subtitle>
+                    <hr/>
                     {props.user.isOnline ? 'Online!': 'Currently Offline'}
                     <hr/>
-                    {props.user.status}
+                   What Im Thinking!: {props.user.status}
                 </Card.Subtitle>
                 <Card.Body>
                     My Interests: {props.user.interests}
                     <hr/>
-                    My Hobbies: {props.user.hobbies}
+                    My Hobbies: <br/> {props.user.hobbies}
                     <hr/>
-                    My Favorite Shows: {props.user.favoriteShows}
+                    My Favorite Shows: <br/> {props.user.favoriteShows}
                 </Card.Body>
               </Card>
               </Col>
 
               <Col>
-              <Card>
+              <Card className='user-profile-feed'>
                   <Card.Title>What your Friends are saying!</Card.Title>
                   {/* Stopping point, lets continue the profile page later and keep working on the login to show a success and an error if user enters wrong name */}
-              </Card>
-              </Col>
+            
+              {props.userList.map(user => {
+                  if (user !== props.user) {
+                return(<Card key={user.id} className='user-feed-card'>
+                      <Card.Title>{user.firstName} {user.lastName}</Card.Title>
+                      <Card.Img className='user-feed-image' src={user.image} />
+                      <Card.Subtitle><br/>{user.isOnline ? 'Online' : 'Currently Offline'}</Card.Subtitle>
+                      <Card.Body>{user.status}</Card.Body>
+                  </Card>
+                )
+              }})}
+                 </Card>
+                </Col>
               </Row>
             </Container>
         </div>

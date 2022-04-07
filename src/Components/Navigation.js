@@ -2,13 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import { Nav,Navbar, NavDropdown } from 'react-bootstrap'
+import logo from '../images/logo.svg'
 
 const NavigatonBar = (props) => {
 
     return (
         <div className='main-nav-container'>
             <Navbar bg='dark' variant='dark' className='nav-bar-container' sticky='top'>
-            <Navbar.Brand as={Link} to='/'>DevelopBook</Navbar.Brand>
+            <Navbar.Brand as={Link} to='/'>DevelopBook <img src={logo} style={{width:'5vw',height:'5vh'}}/> </Navbar.Brand>
                 <Nav className='nav-bar-navigation'>
                    <Nav.Link as={Link} to={'/profile/' + props.userId}>Profile</Nav.Link>
                    <Nav.Link as={Link} to='/friends'>Friends</Nav.Link>

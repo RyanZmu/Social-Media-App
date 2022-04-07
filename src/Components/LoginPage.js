@@ -1,14 +1,24 @@
 import { Formik,Form,Field,useFormik } from "formik";
 import React from "react";
 import ReactDOM from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import loginImage from '../images/login-image.jpg'
 
 const UserLoginPage = (props) => {
 
    
     return ( 
-        <div>
-            <Container className='login-container'>
+        <div className='login-page'>
+        
+        <Container className='login-container'>
+            <Container className='login-page-image-container'>
+                <Row>
+                    <Col>
+                        <img className='login-page-image' src={loginImage} />
+                    </Col>
+                </Row>
+            </Container>
+            
             <Formik
             initialValues={{
                 userName:'',
@@ -39,6 +49,8 @@ const UserLoginPage = (props) => {
                         username: soccerfan1 password: password1
                         <br/>
                         username: kelly92 password: raptorsfan1
+                        <br/>
+                        username:fancypants92 password: louisvutton1
                     </p>
                 </Row>
             </Container>
