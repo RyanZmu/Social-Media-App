@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Popover } from 'react-bootstrap';
+import { Form, Overlay, Popover } from 'react-bootstrap';
 import LandingPage from './Components/SplashPage';
 import UserProfile from './Components/UserProfile';
 import UserLoginPage from './Components/LoginPage';
@@ -14,6 +14,8 @@ import profileMan1 from './images/userImages/profile-man1.jpg'
 import profileMan2 from './images/userImages/profile-man2.jpg'
 import profileMan3 from './images/userImages/profile-man3.jpg'
 import { useBootstrapBreakpoints } from 'react-bootstrap/esm/ThemeProvider';
+import { Tooltip } from 'bootstrap';
+import { Alert } from 'bootstrap';
 
 
 
@@ -48,7 +50,7 @@ function App() {
         interests: 'rap,gym,women',
         hobbies: 'shopping,driving fast cars,being a chad',
         favoriteShows: 'Nitro Circus, Jackass, Ridiculousness',
-        status:`Mudd'in with the boyz - AYOOOO`,
+        status:`Watching the X-Games`,
         image: profileMan2
       },
       {
@@ -61,7 +63,7 @@ function App() {
         interests: 'money,luxury,fine dining',
         hobbies: 'watch fitting,suit tailoring,arguing over the pronunciation of escargot',
         favoriteShows: 'Luxury Ads,Cribs,Sex and the City',
-        status:'Enjoying a spa day!',
+        status:'Shopping for a Rolex!',
         image: profileMan3
       },
       {
@@ -89,7 +91,9 @@ function App() {
     console.log(userRequested);
     usersState.userList.filter(user => {
       if (userRequested.userName === user.userName && userRequested.password === user.password) {
-       return activeUserState(user)
+       user.isOnline = 'true'
+       activeUserState(user)
+       
       }
     })
   }
@@ -106,12 +110,12 @@ function App() {
 
     <Routes>
   <Route
-  path={'/profile/' + activeUser.id}
+  path={activeUser === undefined ? '/sign-in' :'/profile/' + activeUser.id}
   element={<UserProfile user={activeUser} userList={usersState.userList} />}
   />
   <Route 
   path='/sign-in'
-  element={<UserLoginPage activeUserCheck={isActiveUser} />}
+  element={<UserLoginPage activeUserCheck={isActiveUser} activeUser={activeUser}/>}
   />
   <Route
   path='/'

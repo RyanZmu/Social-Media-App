@@ -103,3 +103,12 @@ p {
   width:40vw;
   height:30vh;
 }
+
+.user-form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 5em;
+  border:solid 3px;
+  border-radius: 10px;
+}

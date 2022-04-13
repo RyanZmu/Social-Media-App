@@ -16,8 +16,10 @@ const UserProfile = (props) => {
                 <Card.Subtitle>
                     <hr/>
                     {props.user.isOnline ? 'Online!': 'Currently Offline'}
-                    <hr/>
-                   What Im Thinking!: {props.user.status}
+                    <br/>
+                    <br/>
+                   Current Status: {props.user.status}
+                   <hr/>
                 </Card.Subtitle>
                 <Card.Body>
                     My Interests: {props.user.interests}
