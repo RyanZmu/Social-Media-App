@@ -4,10 +4,6 @@
   background-color: #1B222C
 }
 
-a{
-  text-decoration: none;
-}
-
 p {
   color: white;
 }
@@ -92,14 +88,15 @@ p {
 }
 
 .user-feed-image {
-  max-width:5vw;
+  max-width:10vw;
   max-height:15vh;
   object-fit: stretch;
 }
 
 .user-feed-card {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
   width:40vw;
   height:30vh;
 }

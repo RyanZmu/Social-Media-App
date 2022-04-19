@@ -36,7 +36,7 @@ const LandingPage = (props) => {
               <Card.Img variant='top' src={splash2} className='card-images' alt='phone showing app development' />
               <Card.Subtitle>Reusable Components</Card.Subtitle>
               <Card.Body>
-                Built with React,React-Bootstrap,React-Router-Dom,Formik and more to come.
+                Built with React,React-Bootstrap,React-Router-Dom,Formik and more.
               </Card.Body>
             </Card>
           </Col>

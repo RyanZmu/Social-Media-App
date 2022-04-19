@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Card, Row, Col } from 'react-bootstrap'
 import ReactDOM from 'react-dom'
+import { Link } from 'react-router-dom'
 
 const UserProfile = (props) => {
   console.log(props.user)
@@ -40,8 +41,10 @@ const UserProfile = (props) => {
                 if (user !== props.user) {
                   return (
                     <Card key={user.id} className='user-feed-card'>
+                    <Link to={'/profile/' + user.id } style={{textDecoration:'none',color:'black'}}>
                       <Card.Title>{user.firstName} {user.lastName}</Card.Title>
                       <Card.Img className='user-feed-image' src={user.image} />
+                     </Link>  
                       <Card.Subtitle><br />{user.isOnline ? 'Online' : 'Currently Offline'}</Card.Subtitle>
                       <Card.Body>{user.status}</Card.Body>
                     </Card>

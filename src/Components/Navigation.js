@@ -22,6 +22,10 @@ const NavigatonBar = (props) => {
           </NavDropdown>
         </Nav>
 
+        <Nav className='nav-bar-sign-out'>
+        {props.userId === undefined ? '' : <Nav.Link as={Link} to='/sign-in'>Logged In As:{props.userName} - Sign Out</Nav.Link>}
+        </Nav>
+
       </Navbar>
     </div>
   )

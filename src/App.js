@@ -98,7 +98,7 @@ function App () {
 
   return (
     <div className='App'>
-      <NavigatonBar userId={activeUser.id} />
+      <NavigatonBar userId={activeUser.id} userName={activeUser.firstName + ' ' + activeUser.lastName} />
       {/* we pass activeUser id to our nav bar so it can change url dynamically */}
 
       <Routes>
