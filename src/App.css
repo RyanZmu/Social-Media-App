@@ -109,6 +109,11 @@ p {
   flex-flow: column;
   align-items: center;
   padding: 5em;
-  border:solid 3px;
+  border:solid 3px grey;
   border-radius: 10px;
+}
+
+.user-form>input{
+  margin: 0.5em;
+  width:  12vw;
 }
