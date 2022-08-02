@@ -25,7 +25,7 @@ const NavigatonBar = (props) => {
         <Nav className='nav-bar-sign-out'>
         {props.userId === undefined ? '' : <Nav.Link as={Link} to='/sign-in'>Logged In As:{props.userName} - Sign Out</Nav.Link>}
         </Nav>
-
+        {/* this conditonal is saying if the user name is undefined (so no name is given yet) that the navbar will not change. However if the username is valid the nav bar will then display a new Link with the option to sign out and also will display the users first and last name. We pass the name from the App component controlling state*/}
       </Navbar>
     </div>
   )
