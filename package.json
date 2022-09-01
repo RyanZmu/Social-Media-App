@@ -46,5 +46,5 @@
     "gh-pages": "^4.0.0"
   },
   "proxy": "http://localhost:3001",
-  "homepage": "http://{ryanzmu}.github.io/{Mock-Social-Media-App}"
+  "homepage": "http://ryanzmu.github.io/Mock-Social-Media-App"
 }
