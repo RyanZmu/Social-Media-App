@@ -1,5 +1,4 @@
 # Social Media App
-
 ## Mock database to pull current user profiles and add new ones
 
 # Purpose of Project
@@ -13,13 +12,14 @@
 ## - Expand my knowledge and make an actual JSON database where I can store users and remove users,add to friends,etc.
 </details>
 
-#Ideas!
+# Ideas!
 <details>
  - Instead of the nav bar just displaying Logged In As:username, lets have it display the users picture and be its own dropdown menu so when a user clicks their profile picture in the right corner, they will see a user menu with different options including the sign out option and edit profile option. Maybe place cog icon nearby so user knows to click.
 </details>
 
 # Things to do! 1 = Highest Priority
 <details>
+
 ## - Redirect user to their profile on successful login and reset the login form. 1
 
 ## - Fix user photos on the feed so they are uniform and all same dimensions. 5

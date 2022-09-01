@@ -76,6 +76,15 @@ function App () {
       }
     ]
   })
+  const [data, setData] = React.useState(null);
+//  working on express api calls
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
+  console.log({data});
 
   console.log(usersState)
 
