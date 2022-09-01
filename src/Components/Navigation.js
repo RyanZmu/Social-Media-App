@@ -1,8 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import logo from '../images/logo.svg'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
 const NavigatonBar = (props) => {
   return (
@@ -29,6 +29,11 @@ const NavigatonBar = (props) => {
       </Navbar>
     </div>
   )
+}
+
+NavigatonBar.propTypes = {
+  userId: propTypes.number,
+  userName: propTypes.string
 }
 
 export default NavigatonBar

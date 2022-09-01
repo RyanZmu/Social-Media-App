@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from 'react'
 import './App.css'
-import { Link, Route, Routes } from 'react-router-dom'
-import { Form, Overlay, Popover } from 'react-bootstrap'
+import { Route, Routes } from 'react-router-dom'
 import LandingPage from './Components/SplashPage'
 import UserProfile from './Components/UserProfile'
 import UserLoginPage from './Components/LoginPage'
@@ -12,15 +10,13 @@ import profileWoman from './images/userImages/profile-woman.jpg'
 import profileMan1 from './images/userImages/profile-man1.jpg'
 import profileMan2 from './images/userImages/profile-man2.jpg'
 import profileMan3 from './images/userImages/profile-man3.jpg'
-import { useBootstrapBreakpoints } from 'react-bootstrap/esm/ThemeProvider'
-import { Tooltip, Alert } from 'bootstrap'
 
 function App () {
   function generateId () {
     return Math.floor((1 + Math.random()) * 1000)
   }
 
-  const [usersState, setUser] = useState({
+  const usersState ={
     userList: [
       {
         id: generateId(),
@@ -75,7 +71,7 @@ function App () {
         image: profileWoman
       }
     ]
-  })
+  }
   const [data, setData] = React.useState(null);
 //  working on express api calls
   React.useEffect(() => {

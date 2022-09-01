@@ -1,13 +1,12 @@
 import React from 'react'
-import { Card, Col, Container, Row, Stack } from 'react-bootstrap'
-import ReactDOM from 'react-dom'
+import { Card, Col, Container, Row } from 'react-bootstrap'
 import splash1 from '../images/splash-1.svg'
 import splash2 from '../images/splash-2.svg'
 import splash3 from '../images/splash-3.svg'
 import githublogo from '../images/github-logo.jpeg'
 import landingPageImg from '../images/landing-page.jpg'
 
-const LandingPage = (props) => {
+const LandingPage = () => {
   return (
     <div className='splash-page'>
       <Container fluid className='splash-big-container'>
@@ -64,6 +63,10 @@ const LandingPage = (props) => {
       </Container>
     </div>
   )
+}
+
+LandingPage.propTypes = {
+
 }
 
 export default LandingPage

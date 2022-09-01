@@ -1,6 +1,7 @@
 import { Formik, Form, Field } from 'formik'
 import React from 'react'
 import { Container, Row, Button, Card } from 'react-bootstrap'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
 const UserLoginPage = (props) => {
 
@@ -53,6 +54,11 @@ const UserLoginPage = (props) => {
 
     </div>
   )
+}
+
+UserLoginPage.propTypes = {
+  activeUserCheck: propTypes.object.isRequired,
+  activeUser: propTypes.object.isRequired,
 }
 
 export default UserLoginPage

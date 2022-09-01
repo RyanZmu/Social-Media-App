@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Card, Row, Col } from 'react-bootstrap'
-import ReactDOM from 'react-dom'
+import { propTypes } from 'react-bootstrap/esm/Image'
+// import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 
 const UserProfile = (props) => {
@@ -57,6 +58,11 @@ const UserProfile = (props) => {
       </Container>
     </div>
   )
+}
+
+UserProfile.propTypes = {
+  user: propTypes.object.isRequired,
+  userList: propTypes.object.isRequired,
 }
 
 export default UserProfile
