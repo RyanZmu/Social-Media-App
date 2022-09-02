@@ -57,8 +57,8 @@ const UserLoginPage = (props) => {
 }
 
 UserLoginPage.propTypes = {
-  activeUserCheck: propTypes.object.isRequired,
-  activeUser: propTypes.object.isRequired,
+  activeUserCheck: propTypes.object,
+  activeUser: propTypes.object,
 }
 
 export default UserLoginPage

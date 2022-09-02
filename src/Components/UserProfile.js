@@ -61,8 +61,8 @@ const UserProfile = (props) => {
 }
 
 UserProfile.propTypes = {
-  user: propTypes.object.isRequired,
-  userList: propTypes.object.isRequired,
+  user: propTypes.object,
+  userList: propTypes.object,
 }
 
 export default UserProfile
