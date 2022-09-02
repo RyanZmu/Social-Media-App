@@ -116,7 +116,7 @@ function App () {
           element={<UserLoginPage activeUserCheck={isActiveUser} activeUser={activeUser} />}
         />
         <Route
-          path='/home'
+          path='/'
           element={<LandingPage />}
         />
       </Routes>
