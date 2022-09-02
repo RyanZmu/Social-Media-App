@@ -72,15 +72,16 @@ function App () {
       }
     ]
   }
-  const [data, setData] = React.useState(null);
+  // const [data, setData] = React.useState(null);
 //  working on express api calls
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message));
+  // }, []);
+  //  "proxy": "http://localhost:3001" - readd to package.json later for testing
 
-  console.log({data});
+  // console.log({data});
 
   console.log(usersState)
 
@@ -116,7 +117,7 @@ function App () {
           element={<UserLoginPage activeUserCheck={isActiveUser} activeUser={activeUser} />}
         />
         <Route
-          path='/'
+          path='/*'
           element={<LandingPage />}
         />
       </Routes>
